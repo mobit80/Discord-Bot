@@ -16,6 +16,7 @@ async def on_message(message):
         await message.channel.send('Hello!')
     if message.content.startswith('$gohome'):
         await message.channel.send('Going Home')
+        await disconnect()
         exit(0)
 
 client.run(os.getenv('TOKEN'))
